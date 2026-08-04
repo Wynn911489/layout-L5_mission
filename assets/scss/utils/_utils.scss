@@ -1,0 +1,38 @@
+.text-sm {
+    font-size: 14px;
+}
+
+.py-12px {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.py-32px {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.py-64px {
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+@media (min-width:992px) {
+    .py-lg-64px {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+}
+
+.ms-4px {
+    margin-left: 4px;
+}
+
+.mb-4px {
+    margin-bottom: 4px;
+}
+
+.mx-sm-12px {
+    margin-left: 12px;
+    margin-right: 12px;
+}

@@ -1,0 +1,30 @@
+.footer-bg {
+ 
+  background-color: #212529;
+}
+
+.footer-subs button {
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: black;
+    border-color: black;
+  }
+
+  &:active {
+    animation-name: bounce;
+    animation: bounce 0.2s linear 1;
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0); // 原位
+  }
+
+  50% {
+    transform: translateY(-6px); // 向上推移 8px
+  }
+}

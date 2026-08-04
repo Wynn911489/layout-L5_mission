@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>index</title>
+</head>
+
+<body>
+  <%- include('./layout/header'); -%>
+
+    <main class="bg-light mx-sm-12px">
+      <div class="container py-4 py-lg-5">
+        <div class="row">
+          <div class="col-lg-3 mb-3 mb-lg-0">
+            <div class="list-group">
+              <div class="list-group-item px-5 px-lg-0 py-4 py-lg-5 text-center d-flex flex-lg-column">
+                <div class="profile-img me-4 me-lg-0">
+                  <img class="mb-3" src="../assets/images/avatar.png" alt="">
+                </div>
+                <div class="profile-content text-start text-lg-center">
+                  <h3 class="fw-bold mb-2 h4">Josh</h3>
+                  <p class="text-secondary mb-2 text-sm">helloworld@gmail.com</p>
+                  <span class="badge text-bg-success text-sm fw-normal lh-base px-2 py-1 rounded-3">已驗證</span>
+                </div>
+              </div>
+              <button data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button"
+                class="list-group-item list-group-item-action px-3 py-12px py active" aria-current="true">
+                <i class="bi bi-person me-2"></i>個人資料
+              </button>
+              <button data-bs-toggle="tab" data-bs-target="#upload-tab-pane" type="button"
+                class="list-group-item list-group-item-action px-3 py-12px"><i class="bi bi-laptop me-2"></i>我上架的 AI
+                工具</button>
+              <button data-bs-toggle="tab" data-bs-target="#subscribe-tab-pane" type="button"
+                class="list-group-item list-group-item-action px-3 py-12px"><i class="bi bi-list-ul me-2"></i>我訂閱的 AI
+                工具</button>
+            </div>
+          </div>
+          <div class="col-lg-9">
+            <div class="tab-content" id="myTabContent">
+              <!-- 個人資料 -->
+              <div class="tab-pane fade show active" id="profile-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                tabindex="0">
+                <form action="">
+                  <div class="bg-white p-4 p-lg-5 rounded-3 mb-4">
+                    <h1 class="h4 fw-bold mb-4">基本資料</h1>
+                    <div class="row gy-4">
+                      <div class="col-lg-6">
+                        <label for="exampleFormControlInput1" class="form-label mb-4px">姓名<span
+                            class="text-danger ms-4px">*</span></label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Josh"
+                          readonly>
+                      </div>
+                      <div class="col-lg-6">
+                        <label for="exampleFormControlInput2" class="form-label mb-4px">暱稱</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="請輸入你的暱稱"
+                          readonly>
+                      </div>
+                      <div class="col-lg-6">
+                        <label for="exampleFormControlInput3" class="form-label mb-4px">生日<span
+                            class="text-danger ms-4px">*</span></label>
+                        <input type="date" class="form-control" id="exampleFormControlInput3" placeholder="請選擇日期">
+                      </div>
+                      <div class="col-lg-6">
+                        <label for="exampleFormControlInput4" class="form-label mb-4px">聯絡信箱<span
+                            class="text-danger ms-4px">*</span></label>
+                        <input type="email" class="form-control" id="exampleFormControlInput4"
+                          placeholder="helloworld@gmail.com" readonly>
+                      </div>
+                      <div class="col-lg-6">
+                        <label for="exampleFormControlInput5" class="form-label mb-4px">連絡電話<span
+                            class="text-danger ms-4px">*</span></label>
+                        <input type="tel" class="form-control" id="exampleFormControlInput5" placeholder="0912345678">
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <form action="">
+                  <div class="p-4 p-lg-5 rounded-3 mb-3 mb-lg-4 bg-white">
+                    <h2 class="h4 fw-bold mb-2">通知設定</h2>
+                    <p class="text-sm text-secondary mb-4">通知將寄送到 helloworld@gmail.com ，如需變更，請至頁面上方的基本資料修改聯絡信箱</p>
+                    <div class="mb-lg-4">
+                      <div class="form-check mb-1">
+                        <input class="form-check-input" type="checkbox" value="" id="feedback">
+                        <label class="form-check-label" for="feedback">
+                          工具評價與回饋
+                        </label>
+                      </div>
+                      <p class="text-sm text-secondary">即時掌握使用者留下的評價和回饋</p>
+                    </div>
+                    <div class="mb-3 mb-lg-4">
+                      <div class="form-check mb-1">
+                        <input class="form-check-input" type="checkbox" value="" id="trend">
+                        <label class="form-check-label" for="trend">
+                          AI 趨勢與最新工具
+                        </label>
+                      </div>
+                      <p class="text-sm text-secondary">推薦適合你的新 AI 工具</p>
+                    </div>
+                    <div class="mb-3 mb-lg-4">
+                      <div class="form-check mb-1">
+                        <input class="form-check-input" type="checkbox" value="" id="update">
+                        <label class="form-check-label" for="update">
+                          工具功能更新
+                        </label>
+                      </div>
+                      <p class="text-sm text-secondary">當你訂閱的 AI 工具有新功能或重要更新時，我們會寄信通知你</p>
+                    </div>
+                    <div>
+                      <div class="form-check mb-1">
+                        <input class="form-check-input" type="checkbox" value="" id="notice">
+                        <label class="form-check-label" for="notice">
+                          活動與優惠資訊
+                        </label>
+                      </div>
+                      <p class="text-sm text-secondary mb-0">把握平台限時優惠與活動資訊</p>
+                    </div>
+                  </div>
+                  <div class="text-end">
+                    <button type="button" class="btn btn-primary rounded-pill py-2 px-4">儲存</button>
+                  </div>
+                </form>
+              </div>
+              <!-- 我上架的 AI 工具 -->
+              <div class="tab-pane fade" id="upload-tab-pane" role="tabpanel" aria-labelledby="upload-tab" tabindex="0">
+              </div>
+              <!-- 我訂閱的 AI 工具 -->
+              <div class="tab-pane fade" id="subscribe-tab-pane" role="tabpanel" aria-labelledby="subscribe-tab"
+                tabindex="0">4...</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+    <%- include('./layout/footer'); -%>
+
+      <script type="module" src="../main.js"></script>
+</body>
+
+</html>
